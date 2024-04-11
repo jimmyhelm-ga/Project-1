@@ -1,25 +1,8 @@
-/*-------------------------------- Constants --------------------------------*/
+document.addEventListener("DOMContentLoaded", function() {
+    const button = document.querySelector(".button");
+    const cookieText = document.getElementById("cookieText");
 
-const button = document.querySelector(".button")
-
-
-
-/*-------------------------------- Variables --------------------------------*/
-
-
-
-/*------------------------ Cached Element References ------------------------*/
-
-
-
-
-/*----------------------------- Event Listeners -----------------------------*/
-
-
-button.addEventListener("click", function() {
-    // This function will be executed when the button is clicked
-    alert("You get a cookie!");
+    button.addEventListener("click", function() {
+        cookieText.classList.toggle("hidden");
+    });
 });
-
-
-/*-------------------------------- Functions --------------------------------*/

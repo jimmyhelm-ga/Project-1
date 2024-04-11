@@ -12,6 +12,7 @@
     border-radius: 80px;
     border: 2px solid rgb(83, 60, 255);
 }
+
 .container {
     display: flex;
     justify-content: center;
@@ -19,5 +20,13 @@
 }
 
 body {
-    background-color: black;
+    background-color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+#cookieText {
+    font-size: 50px;
 }
