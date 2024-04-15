@@ -1,32 +1,70 @@
 .button {
-    padding: 0;
-    width: 700px;
-    height: 700px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
     cursor: pointer;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    background-color: #331896;
-    border-radius: 80px;
-    border: 2px solid rgb(83, 60, 255);
+    
 }
 
-.container {
+    /* .button-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-}
+    align-items: flex-end;
+    position: fixed;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+}  */
 
 body {
-    background-color: white;
+    background-image: url("https://cdn.mos.cms.futurecdn.net/BfemybeKVXCf9pgX9WCxsc-1200-80.jpg.webp");
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .hidden {
     display: none;
 }
 
-#cookieText {
+#stokeText {
     font-size: 50px;
 }
+
+/* .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column; 
+} */
+
+.exitSerenityMode {
+    display: none;
+}
+
+
+
+/* .fire {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 400px;
+    margin-right: 100px; */
+
+
+
+/* .fireAnimation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 400px;
+    margin-right: 250px;
+}   */
