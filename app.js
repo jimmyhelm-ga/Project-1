@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const fireButtons = document.querySelector(".fire");
     const poemButtons = document.querySelector(".poemButtons");
     const header = document.querySelector("header");
+    const timerDiv = document.querySelector(".timer");
+
 
 
     //buttons
@@ -16,6 +18,20 @@ document.addEventListener("DOMContentLoaded", function() {
     const exitSerenityModeButton = document.getElementById("exitSerenityMode");
     const writePoemButton = document.getElementById("writePoem");
     const putOutFireButton = document.getElementById("putOutFire");
+    
+
+    
+    //timer
+    let count = 60;
+    const timer = setInterval(function() {
+        count--;
+        timerDiv.innerHTML = count;
+        console.log(count);
+        if (count === 0) {
+            clearInterval(timer); // Clear the interval using the stored ID
+            console.log("The Fire Has Gone Out. Game Over.");
+        }
+}, 1000);
 
     //img
     const fireImage = document.getElementById("fireAnimation");
@@ -28,6 +44,8 @@ document.addEventListener("DOMContentLoaded", function() {
         hiddenContent.style.display = "block";
         textBox.value = "You started the fire!";
         header.style.display = "none";
+        timerDiv.style.display = "block";
+       
     });
 
     stokeButton.addEventListener("click", function() {
