@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const exitSerenityModeDiv = document.querySelector(".exitSerenityMode");
     const fireButtons = document.querySelector(".fire");
     const poemButtons = document.querySelector(".poemButtons");
+    const header = document.querySelector("header");
 
 
     //buttons
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
         startButton.style.display = "none";
         hiddenContent.style.display = "block";
         textBox.value = "You started the fire!";
+        header.style.display = "none";
     });
 
     stokeButton.addEventListener("click", function() {

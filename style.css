@@ -82,3 +82,14 @@ h2 {
     margin-top: 400px;
     margin-right: 250px;
 }   */
+
+
+.textBox textarea {
+    width: 300px; 
+    height: 200px; 
+    resize: none; 
+    padding: none; 
+    background-color: black;
+    color: white;
+    
+}
