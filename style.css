@@ -85,7 +85,7 @@ h2 {
 
 
 .textBox textarea {
-    width: 300px; 
+    width: 200px; 
     height: 200px; 
     resize: none; 
     padding: none; 
@@ -93,3 +93,4 @@ h2 {
     color: white;
     
 }
+

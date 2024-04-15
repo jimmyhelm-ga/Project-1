@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //img
     const fireImage = document.getElementById("fireAnimation");
+    
 
    
    
@@ -30,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     stokeButton.addEventListener("click", function() {
-        fireImage.src = "https://i.gifer.com/origin/d9/d9dd657cfef3fb5188596ace989a7dd7_w200.gif"
+        fireImage.src = "https://i.gifer.com/origin/d9/d9dd657cfef3fb5188596ace989a7dd7_w200.gif";
         textBox.value = "You stoked the fire!";
     });
 
@@ -56,8 +57,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     putOutFireButton.addEventListener("click", function() {
-        textBox.value = "You Put Out the Fire. The Simulation Has Ended.";
-        fireAnimation.style.display = "none";
+        textBox.value = "You Put Out the Fire.";
+        fireImage.src = "https://www.animationsoftware7.com/img/agifs/smoke04.gif";
     });
 
     writePoemButton.addEventListener("click", function() {
@@ -65,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
         textBox.value = "";
         textBox.focus();
     });
+
 
     
 });
