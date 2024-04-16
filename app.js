@@ -1,4 +1,6 @@
 
+
+
 document.addEventListener("DOMContentLoaded", function() {
     //divs
     const hiddenContent = document.querySelector(".atFirstHidden");
@@ -41,7 +43,7 @@ const timer = setInterval(function() {
         timerDiv.style.display = "none";
 
         const gameOverButton = document.createElement("button");
-            gameOverButton.textContent = "Game Over. Click Here to Start Again.";
+            gameOverButton.textContent = "The Fire Went Out. Click Here to Start Again.";
             gameOverButton.addEventListener("click", function() {
             location.reload(); // Reload the page
         });
@@ -67,6 +69,8 @@ const timer = setInterval(function() {
         textBox.value = "You started the fire!";
         header.style.display = "none";
         timerDiv.style.display = "block";
+        count = 60;
+        timerDiv.innerHTML = count;
 
         
 
@@ -76,9 +80,10 @@ const timer = setInterval(function() {
 
     stokeButton.addEventListener("click", function() {
         fireImage.src = "https://i.gifer.com/origin/d9/d9dd657cfef3fb5188596ace989a7dd7_w200.gif";
-        textBox.value = "You stoked the fire!";
+        textBox.value += "\nYou stoked the fire!";
         count = 60;
         timerDiv.innerHTML = count;
+        
     });
 
     serenityModeButton.addEventListener("click", function() {

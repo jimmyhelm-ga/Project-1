@@ -5,6 +5,7 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    font-family: "Press Start 2P", system-ui;
     
 }
 
@@ -54,15 +55,19 @@ body {
 h1 {
     color: orange;
     font-size: 50px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Press Start 2P", system-ui;
+
+     }
+
+     
     
 
-}
+
 
 h2 {
     color: orange;
     font-size: 25;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Press Start 2P", system-ui;
 }
 
 
@@ -85,17 +90,28 @@ h2 {
 
 
 .textBox textarea {
-    width: 200px; 
+    width: 300px; 
     height: 200px; 
     resize: none; 
     padding: none; 
     background-color: black;
     color: white;
+    font-family: "Press Start 2P", system-ui;
     
 }
 
 .timer {
     font-size: 48px; 
     color: orange; 
-    font-family: 'Courier New', Courier, monospace
+    font-family: "Press Start 2P", system-ui;
+}
+
+.press-start 2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .gameOverButton {
+    font-family: "Press Start 2P", system-ui;
 }
