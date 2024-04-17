@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const poemButtons = document.querySelector(".poemButtons");
     const header = document.querySelector("header");
     const timerDiv = document.querySelector(".timer");
-
+    const textBoxDiv = document.querySelector(".textBoxDiv")
 
 
     //buttons
@@ -20,17 +20,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const exitSerenityModeButton = document.getElementById("exitSerenityMode");
     const writePoemButton = document.getElementById("writePoem");
     const putOutFireButton = document.getElementById("putOutFire");
+
     
 //timer
 let count = 60;
 const timer = setInterval(function() {
     count--;
     timerDiv.innerHTML = count;
-    console.log(count);
     if (count === 0) {
         clearInterval(timer); 
-        // console.log("The Fire Has Gone Out. Game Over.");
-
         hiddenContent.style.display = "none";
         timerDiv.style.display = "none";
         fireAnimation.style.display = "none";
@@ -38,18 +36,15 @@ const timer = setInterval(function() {
         const smokeAnimation = document.createElement("img");
             smokeAnimation.src = "https://www.animationsoftware7.com/img/agifs/smoke04.gif";
             document.body.appendChild(smokeAnimation);
-
-        hiddenContent.style.display = "none";
-        timerDiv.style.display = "none";
-
-        const gameOverButton = document.createElement("button");
+        
+            const gameOverButton = document.createElement("button");
             gameOverButton.textContent = "The Fire Went Out. Click Here to Start Again.";
+            gameOverButton.classList.add("gameOverButton"); // Add a class for styling
             gameOverButton.addEventListener("click", function() {
-            location.reload(); // Reload the page
-        });
-
+                location.reload(); // Reload the page
+            });
+    
         document.body.appendChild(gameOverButton);
-
 
     }
 }, 1000);
@@ -66,16 +61,12 @@ const timer = setInterval(function() {
     startButton.addEventListener("click", function() {
         startButton.style.display = "none";
         hiddenContent.style.display = "block";
-        textBox.value = "You started the fire!";
         header.style.display = "none";
+        textBox.value = "You started the fire!";
         timerDiv.style.display = "block";
         count = 60;
         timerDiv.innerHTML = count;
-
-        
-
-    
-       
+  
     });
 
     stokeButton.addEventListener("click", function() {
@@ -92,8 +83,8 @@ const timer = setInterval(function() {
         fireAnimation.style.display = "block";
         exitSerenityModeDiv.style.display = "block";
         fireButtons.style.display = "none";
-        poemButtons.style.display = "none";
         timerDiv.style.display = "none";
+        textBoxDiv.style.display = "none"
     });
 
     exitSerenityModeButton.addEventListener("click", function() {
@@ -102,9 +93,9 @@ const timer = setInterval(function() {
         serenityModeButton.style.display = "block";
         fireAnimation.style.display = "none";
         exitSerenityModeDiv.style.display = "none";
-        fireButtons.style.display = 'block'
-        fireAnimation.style.display = "block";
-        poemButtons.style.display = "block";
+        fireButtons.style.display = 'flex'
+        fireAnimation.style.display = "flex";
+        textBoxDiv.style.display = "block";
         count = 60;
         timerDiv.innerHTML = count;
         timerDiv.style.display = "block";
@@ -112,19 +103,18 @@ const timer = setInterval(function() {
     });
 
     putOutFireButton.addEventListener("click", function() {
-        textBox.value = "You Put Out the Fire.";
         fireImage.src = "https://www.animationsoftware7.com/img/agifs/smoke04.gif";
         timerDiv.style.display = "none";
         startButton.style.display = "none";
-        // hiddenContent.style.display = "none";
-        // textBox.stlye.display = "block";
+        textBoxDiv.style.display = "none";
 
 
     const gameOverButton = document.createElement("button");
-    gameOverButton.textContent = "The Fire Went Out. Click Here to Start Again.";
-    gameOverButton.addEventListener("click", function() {
-        location.reload(); // Reload the page
-    });
+        gameOverButton.textContent = "The Fire Went Out. Click Here to Start Again.";
+        gameOverButton.classList.add("gameOverButton"); // Add a class for styling
+        gameOverButton.addEventListener("click", function() {
+            location.reload(); // Reload the page
+        });
 
     document.body.appendChild(gameOverButton);
 
@@ -137,7 +127,6 @@ const timer = setInterval(function() {
     });
 
     writePoemButton.addEventListener("click", function() {
-        console.log('hitting!')
         textBox.value = "";
         textBox.focus();
     });
